@@ -1,0 +1,78 @@
+.episode {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.episode__number {
+  font-size: 10vw;
+  font-weight: 600;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  height: calc(10vw + 20px);
+  transition: all 0.2s ease-in;
+}
+
+.episode__content {
+  border-top: 2px solid #fff;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  padding: 15px 0;
+}
+
+.episode__content .title {
+  font-weight: 600;
+}
+
+.episode__content .story {
+  line-height: 26px;
+}
+
+.toggle-button {
+  background-color: #ffffff;
+  color: #444;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle-button:hover {
+  box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.774);
+}
+
+
+.details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.details.open {
+  max-height: 1000px;
+  padding: 10px 0;
+}
+
+@media (hover: none) {
+  .toggle-button:hover {
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .episode__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .episode__content .story {
+    font-size: 15px;
+  }
+}

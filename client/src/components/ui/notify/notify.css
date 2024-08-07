@@ -1,0 +1,44 @@
+/* Notify.css */
+.notify {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 16px;
+  z-index: 20;
+}
+
+.notify__message {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.notify__message--error {
+  background-color: #f56565; /* Rose color */
+}
+
+.notify__message--success {
+  background-color: #38a169; /* Teal color */
+}
+
+.notify__closeButton {
+  margin-left: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.notify__closeButton:hover {
+  color: #d1d5db; /* Lighter shade */
+}
