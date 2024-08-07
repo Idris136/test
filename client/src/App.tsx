@@ -13,12 +13,13 @@ function App(): JSX.Element {
   const users = useAppSelector((state) => state.user.users);
 
   return (
-    <><div className="container">
-    <UserList users={users} />
-  </div>
-  <Notify /></>
+    <>
+      <div className="container">
+        <UserList users={users} />
+      </div>
+      <Notify />
+    </>
   );
 }
 
 export default App;
-
